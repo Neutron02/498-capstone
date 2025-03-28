@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+
+const onSubmit = (event) => {
+// print the value from the input field
+  const inputValue = event.target.previousElementSibling.value;
+  console.log(inputValue);
+
+  // clear the input field
+  event.target.previousElementSibling.value = '';
+}
 
 function App() {
   return (
+    // I don't wnat autocomplete. I just want a simple user input
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Simple User Input</h1>
+      <input type="text" placeholder="Type something..."/>
+      <button onClick={onSubmit} type="button">Submit</button>
     </div>
   );
 }
