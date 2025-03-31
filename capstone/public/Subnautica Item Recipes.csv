@@ -1,0 +1,226 @@
+Item,Crafting Recipe,Crafted Using,Category,Subcategory,Obtainable From
+Titanium (x4),Metal salvage,Fabricator,Basic Materials,Resources,Unlocked by default
+Titanium ingot,Titanium (x10),Fabricator,Basic Materials,Resources,Unlocked by default
+Fiber mesh,Creepvine sample (x2),Fabricator,Basic Materials,Resources,Acquire Creepvine sample
+Silicone Rubber,Creepvine seed cluster,Fabricator,Basic Materials,Resources,Unlocked by default
+Glass,Quartz (x2),Fabricator,Basic Materials,Resources,Unlocked by default
+Bleach,"Salt deposit, Coral Tube Sample",Fabricator,Basic Materials,Resources,Unlocked by default
+Lubricant,Creepvine seed cluster,Fabricator,Basic Materials,Resources,Acquire Creepvine seed cluster
+Enameled glass,"Glass, stalker tooth",Fabricator,Basic Materials,Resources,"Acquire blueprint for Observatory or Cyclops, 
+or acquire a Stalker tooth"
+Plasteel ingot,"Titanium ingot, Lithium (x2)",Fabricator,Basic Materials,Resources,"Unlock Seamoth, Prawn suit or Cyclops blueprint"
+Hydrochloric acid,"Deep shroom (x3), salt deposit",Fabricator,Advanced Materials,Resources,Acquire Deep shroom
+Benzene,Blood oil (x3),Fabricator,Advanced Materials,Resources,Acquire Blood oil
+Synthetic fibers,"Benzene, Fiber mesh",Fabricator,Advanced Materials,Resources,Acquire Blood oil
+Aerogel,"Gel sack, Ruby",Fabricator,Advanced Materials,Resources,Acquire Gel sack
+Polyaniline,"Gold, Hydrochloric acid",Fabricator,Advanced Materials,Resources,Acquire Deep shroom
+Copper wire,Copper (x2),Fabricator,Electronics,Resources,Unlocked by default
+Hatching enzymes,"Eye stalk seed, Sea crown seed, Fungal sample,
+Ghost weed seed, Bulb bush sample
+",Fabricator,Advanced Materials,Resources,Activate Aquarium arch 
+Battery,"Acid mushroom (x2), Copper",Fabricator,Electronics,Resources,Unlocked by default
+Ion battery,"Ion cube, Gold, Silver ore",Fabricator,Electronics,Resources,Data Terminal inside the Alien Thermal Plant
+Power cell,"Battery (x2), Silicone rubber",Fabricator,Electronics,Resources,Acquire Battery
+Ion power cell,"Ion battery (x2),Silicone rubber",Fabricator,Electronics,Resources,Data Terminal inside the Alien Thermal Plant
+Computer chip,"Table coral sample (x2), Gold, Copper wire",Fabricator,Electronics,Resources,Unlocked by default
+Wiring kit,Silver ore (x2),Fabricator,Electronics,Resources,Unlocked by default
+Advanced wiring kit,"Wiring kit, Gold (x2), Computer chip",Fabricator,Electronics,Resources,Acquire Computer chip
+Reactor rod,"Uraninite crystal (x3), Lead, Titanium, Glass",Fabricator,Electronics,Resources,Unlock Multipurpose room blueprint
+Filtered water,Bladderfish,Fabricator,Water,Sustenance,Acquire Bladderfish
+Disinfected water,Bleach,Fabricator,Water,Sustenance,Unlocked by default
+Cooked holefish,Holefish,Fabricator,Cooked Food,Sustenance,Acquire Holefish
+Cooked peeper,Peeper,Fabricator,Cooked Food,Sustenance,Acquire Peeper
+Cooked bladderfish,Bladderfish,Fabricator,Cooked Food,Sustenance,Acquire Bladderfish
+Cooked garryfish,Garryfish,Fabricator,Cooked Food,Sustenance,Acquire Garryfish
+Cooked hoverfish,Hoverfish,Fabricator,Cooked Food,Sustenance,Acquire Hoverfish
+Cooked spadefish,Spadefish,Fabricator,Cooked Food,Sustenance,Aquire Spadefish
+Cooked boomerang,Boomerang,Fabricator,Cooked Food,Sustenance,Acquire Boomerang
+Cooked eyeye,Eyeye,Fabricator,Cooked Food,Sustenance,Acquire Eyeye
+Cooked oculus,Oculus,Fabricator,Cooked Food,Sustenance,Acquire Oculus
+Cooked hoopfish,Hoopfish,Fabricator,Cooked Food,Sustenance,Acquire Hoopfish
+Cooked spinefish,Spinefish,Fabricator,Cooked Food,Sustenance,Acquire Spinefish
+Cured holefish,"Holefish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Holefish
+Cured peeper,"Peeper, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Peeper
+Cured bladderfish,"Bladderfish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Bladderfish
+Cured garryfish,"Garryfish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Garryfish
+Cured hoverfish,"Hoverfish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Hoverfish
+Cured spadefish,"Spadefish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Spadefish
+Cured boomerang,"Boomerang, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Boomerang
+Cured eyeye,"Eyeye, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Eyeye
+Cured oculus,"Oculus, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Oculus
+Cured hoopfish,"Hoopfish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Hoopfish
+Cured spinefish,"Spinefish, Salt deposit",Fabricator,Cured Food,Sustenance,Acquire Spinefish
+Standard O2 Tank,Titanium (x3),Fabricator,Equipment,Personal,Unlocked by default
+High Capacity O2 Tank,"Standard O2 Tank, Glass (x2), Titanium (x4),
+ Silver ore",Fabricator,Equipment,Personal,Acquire Standard O2 Tank
+Fins,Silicone rubber (x2),Fabricator,Equipment,Personal,Unlocked by default 
+Radiation suit,"Fiber mesh (x2), Lead (x2)",Fabricator,Equipment,Personal,Aurora drive core explosion (based on time played)
+Reinforced dive suit,"Synthetic fibers, Diamond (x2), Titanium (x2)",Fabricator,Equipment,Personal,Data boxes in wrecks
+Water filtration suit,"Synthetic fibers, Aerogel, Copper wire",Fabricator,Equipment,Personal,"Data boxes in wrecks (Dunes Wreck,
+ Mountains Wreck) "
+First aid kit,Fiber mesh,Fabricator,Equipment,Personal,Unlocked by default
+Fire extinguisher,Titanium (x3),Fabricator,Equipment,Personal,Unlocked by default
+Rebreather,"Wiring kit, Fiber mesh",Fabricator,Equipment,Personal,Acquire High Capacity O2 Tank
+Compass,"Copper wire, Wiring kit",Fabricator,Equipment,Personal,Databox at Lifepod 2 and in a wreck
+Pipe,Titanium (x2),Fabricator,Equipment,Personal,Unlocked by default
+Floating air pump,Titanium (x2),Fabricator,Equipment,Personal,Unlocked by default
+Purple tablet,"Ion cube, Diamond (x2)",Fabricator,Equipment,Personal,Scan Purple tablet
+Blue tablet,"Ion cube, Kyanite (x2)",Fabricator,Equipment,Personal,Scan Blue tablet
+Orange tablet,"Ion cube, Nickel ore (x2)",Fabricator,Equipment,Personal,Scan Orange tablet
+Scanner,"Battery, Titanium",Fabricator,Tools,Personal,Unlocked by default
+Repair tool,"Silicone rubber, Cave sulfur, Titanium",Fabricator,Tools,Personal,Unlocked by default
+Flashlight,"Battery, Glass",Fabricator,Tools,Personal,Unlocked by default
+Survival knife,"Silicone rubber, Titanium",Fabricator,Tools,Personal,Unlocked by default
+Pathfinder tool,"Creepvine seed cluster (x2), Copper wire,
+Titanium",Fabricator,Tools,Personal,Acquire Creepvine sample
+Air bladder,"Silicone rubber, Bladderfish",Fabricator,Tools,Personal,Unlocked by default
+Flare,Cave sulfur,Fabricator,Tools,Personal,Unlocked by default
+Habitat builder,"Computer chip, Wiring kit, Battery",Fabricator,Tools,Personal,Unlocked by default
+Laser cutter,"Diamond (x2), Battery, Titanium, Cave sulfur",Fabricator,Tools,Personal,Scan fragments
+Stasis rifle,"Computer chip, Battery, Magnetite (x2), Titanium",Fabricator,Tools,Personal,Scan fragments
+Propulsion cannon,"Wiring kit, Battery, Titanium",Fabricator,Tools,Personal,Scan fragments
+Light stick,"Battery, Titanium, Glass",Fabricator,Tools,Personal,Scan fragments
+Seaglide,"Battery, Lubricant, Copper wire, Titanium",Fabricator,Machines,Deployables,Scan fragments
+Mobile vehicle bay,"Titanium ingot, Lubricant, Power cell",Fabricator,Machines,Deployables,Scan fragments
+Beacon,"Copper ore, Titanium",Fabricator,Machines,Deployables,Scan fragments
+Waterproof locker,Titanium (x4),Fabricator,Machines,Deployables,Unlocked by default
+Grav trap,"Battery, Copper ore, Titanium",Fabricator,Machines,Deployables,Scan fragments
+Creature decoy,"Titanium (x3), Wiring kit",Fabricator,Machines,Deployables,Data box at Lifepod 4 and in a wreck
+Seamoth,"Titanium ingot, Power cell, Glass (x2),
+Lubricant, Lead",Mobile vehicle bay,Mobile vehicle bay,Vehicles,Scan fragments
+Prawn suit,"Plasteel ingot (x2), Aerogel (x2), 
+Enameled glass, Diamond (x2), Lead (x2)",Mobile vehicle bay,Mobile vehicle bay,Vehicles,Scan fragments
+Neptune Launch Platform,"Titanium ingot (x2), Computer chip, Lead (x4)",Mobile vehicle bay,Mobile vehicle bay,Neptune Escape Rocket,Data Terminal in the Captain's Quarters on the Aurora
+Neptune Gantry,"Plasteel ingot, Copper wire, Lubricant",Neptune Launch Platform,Mobile vehicle bay,,Build the Neptune Launch Platform
+Neptune Boosters,"Plasteel ingot. Nickel ore (x3) Aerogel (x2), 
+Wiring kit",Neptune Launch Platform,Mobile vehicle bay,,Build the Neptune Gantry
+Neptune Fuel Reserve,"Plasteel ingot, Crystalline sulfur (x4),
+ Kyanite (x4), Ion power cell (x2)",Neptune Launch Platform,Mobile vehicle bay,,Build the Neptune Boosters
+Neptune Cockpit,"Cyclops shield generator, Plasteel ingot,
+Enameled glass, Computer chip",Neptune Launch Platform,Mobile vehicle bay,,Build the Neptune Fuel Reserve
+Seamoth depth module MK1,"Titanium ingot, Glass (x2)",Vehicle upgrade console,Vehicle Upgrades,Seamoth Modules,Open/Build vehicle upgrade console
+Hull reinforcement,"Titanium (x3), Lithium, Diamond (x4)",Vehicle upgrade console,Vehicle Upgrades,Common Modules,Open/Build vehicle upgrade console
+Engine efficiency module,"Computer chip, Polyaniline",Vehicle upgrade console,Vehicle Upgrades,Common Modules,Open/Build vehicle upgrade console
+Storage module,"Titanium (x3), Lithium",Vehicle upgrade console,Vehicle Upgrades,Common Modules,Open/Build vehicle upgrade console
+Seamoth solar charger,"Advanced wiring kit, Enameled glass",Vehicle upgrade console,Vehicle Upgrades,Seamoth Modules,Open/Build vehicle upgrade console
+"Seamoth perimeter defense
+system","Polyaniline, Wiring kit",Vehicle upgrade console,Vehicle Upgrades,Seamoth Modules,Open/Build vehicle upgrade console
+Seamoth torpedo system,"Titanium (x3), Lithium, Aerogel",Vehicle upgrade console,Vehicle Upgrades,Seamoth Modules,Open/Build vehicle upgrade console
+Seamoth sonar,"Copper wire, Magnetite (x2)",Vehicle upgrade console,Vehicle Upgrades,Seamoth Modules,Open/Build vehicle upgrade console
+Prawn suit depth module MK1,"Plasteel ingot, Nickel ore (x3), Ruby (x2)",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Open/Build vehicle upgrade console
+Prawn suit thermal reactor,"Polyaniline, Kyanite (x2), Wiring kit",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Open/Build vehicle upgrade console
+Prawn suit jump jet upgrade,"Nickel ore (x2), Crystaline sulfur (x3),
+Titanium (x5), Lithium",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Open/Build vehicle upgrade console
+Prawn suit propulsion cannon,"Computer chip, Titanium (x5), Magnetite (x2), 
+Lithium",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Scan fragments
+Prawn suit grappling arm,"Advanced wiring kit, Benzene, Titanium (x5),
+Lithium",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Scan fragments
+Prawn suit drill arm,"Titanium (x5), Lithium, Diamond (x4)",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Scan fragments
+Prawn suit torpedo arm,"Titanium (x5), Lithium, Aerogel",Vehicle upgrade console,Vehicle Upgrades,Prawn suit modules,Scan fragments
+Vortex torpedo,"Titanium, Magnetite",Vehicle upgrade console,Vehicle Upgrades,Torpedoes,Open/Build vehicle upgrade console
+Gas torpedo,"Titanium, Gas pod",Vehicle upgrade console,Vehicle Upgrades,Torpedoes,Open/Build vehicle upgrade console
+Thermoblade,"Survival Knife, Battery",Modification station,Modification station,,Open/Build Modification station
+Lightweight High Capacity Tank,"High Capacity O2 Tank, Plasteel ingot",Modification station,Modification station,,Open/Build Modification station
+Ultra High Capacity Tank,"High Capacity O2 Tank, Lithium (x4)",Modification station,Modification station,,Open/Build Modification station
+Ultra glide fins,"Fins, Silicone rubber (x2), Titanium, Lithium",Modification station,Modification station,,Open/Build Modification station
+Swim charge fins,"Fins, Polyaniline, Wiring kit",Modification station,Modification station,,Open/Build Modification station
+Repulsion cannon,"Propulsion cannon, Computer chip, 
+Magnetite (x2)",Modification station,Modification station,,Data box in The Lab in the Aurora
+Cyclops depth module MK2,"Cyclops depth module MK1, Plasteel ingot,
+Nickel ore (x3)",Modification station,Modification station,,Unlock Cyclops blueprints
+Cyclops depth module MK3,"Cyclops depth module MK2, Plasteel ingot,
+Kyanite (x3)",Modification station,Modification station,,Unlock Cyclops blueprints
+Seamoth depth module MK2,"Seamoth depth module MK1, Plasteel ingot,
+Magnetite (x2), Enameled glass",Modification station,Modification station,,Open/Build vehicle upgrade console
+Seamoth depth module MK3,"Seamoth depth module MK2, Plasteel ingot,
+Ruby (x3)",Modification station,Modification station,,Open/Build vehicle upgrade console
+Prawn suit depth module MK2,"Prawn suit depth module MK1, Titanium (x5),
+Lithium (x2) Kyanite (x3)",Modification station,Modification station,,Open/Build vehicle upgrade console
+Scanner room HUD chip,"Computer chip, Magnetite",Scanner room fabricator,Scanner Room Upgrades,,Open/Build Scanner room fabricator
+Camera drone,"Computer chip, Battery, Glass, Titanium",Scanner room fabricator,Scanner Room Upgrades,,Open/Build Scanner room fabricator
+Scanner room range upgrade,"Copper ore, Magnetite",Scanner room fabricator,Scanner Room Upgrades,,Open/Build Scanner room fabricator
+Scanner room speed upgrade,"Silver ore, Gold",Scanner room fabricator,Scanner Room Upgrades,,Open/Build Scanner room fabricator
+Cyclops Hull Blueprint,Plans for building a cyclops,,Cyclops,,Scan fragments
+Cyclops Bridge Blueprint,Plans for building a cyclops,,Cyclops,,Scan fragments
+Cyclops Engine Blueprint,Plans for building a cyclops,,Cyclops,,Scan fragments
+Cyclops,"Plasteel ingot (x3), Enameled glass (x3),
+Lubricant, Advanced Wiring kit, Lead (x3)",Mobile Vehicle Bay,Cyclops,,"Unlock Cyclops Hull Blueprint, Cyclops Bridge
+Blueprint and Cyclops Engine Blueprint"
+Cyclops depth module MK1,"Plasteel ingot, Ruby (x3)",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Data Box at Lifepod 2 and in wrecks
+Cyclops engine efficiency module,"Computer chip, Benzene, Polyaniline",Cyclops Upgrade Fabricator,Cyclops Upgrades,,"Building the Cyclops opening the
+Cyclops Upgrade Fabricator"
+Cyclops shield generator,"Advanced wiring kit, Polyaniline, Power cell",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Unlock Cyclops blueprint
+Cyclops sonar upgrade,"Computer chip, Magnetite",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Data Boxes in wrecks
+Cyclops docking bay repair module,"Repair tool, Copper wire",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Data Boxes in wrecks
+Cyclops fire suppression system,"Aerogel (x2), Crystalline sulfur (x2)",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Data Boxes in wrecks
+Cyclops Decoy Tube Upgrade,"Titanium (x3), Lithium (x2), Aerogel",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Data Boxes in wrecks
+Cyclops thermal reactor module,"Polyaniline (x2), Kyanite (x4), Wiring kit",Cyclops Upgrade Fabricator,Cyclops Upgrades,,Data Boxes in wrecks
+Foundation,"Titanium (x2), Lead (x2)",Habitat Builder,Base Pieces,,Unlocked by default
+I compartment,Titanium (x2),Habitat Builder,Base Pieces,,Unlocked by default
+L compartment,Titanium (x2),Habitat Builder,Base Pieces,,Unlocked by default
+T compartment,Titanium (x3),Habitat Builder,Base Pieces,,Unlocked by default
+X compartment,Titanium (x3),Habitat Builder,Base Pieces,,Unlocked by default
+I Glass compartment,Glass (x2),Habitat Builder,Base Pieces,,Unlocked by default
+L Glass compartment,Glass (x2),Habitat Builder,Base Pieces,,Unlocked by default
+Vertical connector,Titanium (x2),Habitat Builder,Base Pieces,,Unlocked by default
+Multipurpose room,Titanium (x6),Habitat Builder,Base Rooms,,Scan Multipurpose room
+Scanner room,"Titanium (x5), Copper ore (x2), Gold,
+Table coral sample",Habitat Builder,Base Rooms,,Scan fragments
+Moonpool,"Titanium ingot (x2), Lubricant, Lead (x2)",Habitat Builder,Base Rooms,,Scan fragments
+Observatory,"Enameled glass (x2), Titanium",Habitat Builder,Base Rooms,,Scan observatory
+Large room,Plasteel ingot (x2),Habitat Builder,Base Rooms,,Unlock Multipurpose room Blueprint
+Multipurpose room glass dome,"Enameled glass (x2), Titanium (x2), Lithium",Habitat Builder,Base Rooms,,Unlock Multipurpose room Blueprint
+Large room glass dome,"Enameled glass (x4), Titanium (x4), Lithium (x2)",Habitat Builder,Base Rooms,,Unlock Multipurpose room Blueprint
+Hatch,"Quartz, Titanium (x2)",Habitat Builder,Base Walls,,Unlocked by default
+Window,Glass,Habitat Builder,Base Walls,,Unlocked by default
+Reinforcement,"Lithium, Titanium (x3)",Habitat Builder,Base Walls,,Unlocked by default
+Solar panel,"Quartz (x2), Titanium (x2), Copper ore",Habitat Builder,Exterior Modules,,Unlocked by default
+Thermal plant,"Titanium (x5), Magnetite (x2), Aerogel",Habitat Builder,Exterior Modules,,Scan fragments
+Power transmitter,"Gold, Titanium",Habitat Builder,Exterior Modules,,Scan fragment
+Floodlight,"Glass, Titanium",Habitat Builder,Exterior Lights,,Scan Floodlight
+Spotlight,"Glass, Titanium (x2)",Habitat Builder,Exterior Lights,,Scan Spotlight
+Exterior growbed,Titanium (x2),Habitat Builder,Exterior Other,,Scan Exterior growbed
+Base-attached air pump,Titanium (x2),Habitat Builder,Exterior Other,,Unlocked by default
+Ladder,Titanium (x2),Habitat Builder,Interior Installations,,Unlocked by default
+Water filtration machine,"Titanium (x3), Copper wire, Aerogel",Habitat Builder,Interior Installations,,Scan Water filtration machine
+Bulkhead,"Titanium (x3), Silicone rubber",Habitat Builder,Interior Installations,,Scan Bulkhead
+Vehicle upgrade console,"Titanium (x3), Computer chip, Copper wire",Habitat Builder,Interior Installations,,Data Boxes in wrecks
+Large room partition,Titanium,Habitat Builder,Interior Installations,,Unlock Multipurpose room Blueprint
+Large room partition door,"Titanium, Quartz",Habitat Builder,Interior Installations,,Unlock Multipurpose room Blueprint
+Bioreactor,"Titanium (x3), Wiring kit, Lubricant",Habitat Builder,Interior Rooms,,Scan fragments
+Nuclear reactor,"Plasteel ingot, Advanced wiring kit, Lead (x3)",Habitat Builder,Interior Rooms,,Scan fragments
+Alien containment,"Glass (x3), Titanium (x2)",Habitat Builder,Interior Rooms,,Data Boxes in wrecks
+Fabricator,"Titanium, Gold, Table coral sample",Habitat Builder,Interior Modules,,Unlocked by default
+Radio,"Titanium, Copper ore",Habitat Builder,Interior Modules,,Unlocked by default
+Medical Kit Fabricator,"Computer chip, Fiber mesh, Silver ore, Titanium",Habitat Builder,Interior Modules,,Unlocked by default
+Wall Locker,Titanium (x2),Habitat Builder,Interior Modules,,Unlocked by default
+Locker,"Quartz, Titanium (x2)",Habitat Builder,Interior Modules,,Unlocked by default
+Battery charger,"Wiring kit, Copper wire, Titanium",Habitat Builder,Interior Modules,,Scan fragments
+Power cell charger,"Advanced wiring kit, Ruby (x2), Titanium (x2)",Habitat Builder,Interior Modules,,Scan fragments
+Aquarium,"Glass (x2), Titanium",Habitat Builder,Interior Modules,,Unlocked by default
+Modification station,"Computer chip, Titanium, Diamond, Lead",Habitat Builder,Interior Modules,,Scan fragments
+Basic plant pot,Titanium (x2),Habitat Builder,Interior Modules,,Scan fragment
+Composite plant pot,Titanium (x4),Habitat Builder,Interior Modules,,Scan Composite plant pot
+Chic plant pot,Titanium (x2),Habitat Builder,Interior Modules,,Scan Composite plant pot
+Indoor growbed,Titanium (x4),Habitat Builder,Interior Modules,,Scan Indoor growbed
+Plant shelf,Titanium,Habitat Builder,Interior Modules,,Scan Plant shelf
+Bench,Titanium (x2),Habitat Builder,Miscellaneous,,Scan Bench
+Basic Double bed,"Titanium (x2), Fiber mesh",Habitat Builder,Miscellaneous,,Scan Basic Double bed
+Quilted double bed,"Titanium (x2), Fiber mesh",Habitat Builder,Miscellaneous,,Scan Quilted double bed
+Single bed,"Titanium, Fiber mesh",Habitat Builder,Miscellaneous,,Scan Single bed
+Desk,Titanium,Habitat Builder,Miscellaneous,,Scan Desk
+Swivel chair,Titanium,Habitat Builder,Miscellaneous,,Scan Swivel chair
+Office chair,Titanium,Habitat Builder,Miscellaneous,,Scan Office chair
+Command chair,Titanium,Habitat Builder,Miscellaneous,,Scan Command chair
+Sign,Copper wire,Habitat Builder,Miscellaneous,,Unlocked by default
+Picture Frame,Copper wire,Habitat Builder,Miscellaneous,,Scan Picture Frame
+Bar table,"Glass, Titanium",Habitat Builder,Miscellaneous,,Scan Bar table
+Trash can,Titanium (x2),Habitat Builder,Miscellaneous,,Scan Trash can
+Nuclear waste disposal,Titanium (x2),Habitat Builder,Miscellaneous,,Scan Nuclear waste disposal
+Vending machine,"Glass, Titanium (x2)",Habitat Builder,Miscellaneous,,Scan Vending machine
+Coffee vending machine,Titanium (x2),Habitat Builder,Miscellaneous,,Scan Coffee vending machine
+Counter,Titanium (x2),Habitat Builder,Miscellaneous,,Scan counter
+Wall planter,Titanium,Habitat Builder,Miscellaneous,,Scan wall planter
+Single wall shelf,Titanium,Habitat Builder,Miscellaneous,,Scan Single wall shelf
+Wall shelves,Titanium (x2),Habitat Builder,Miscellaneous,,Scan Wall shelves
+An unusual doll,"Glass, Titanium",Habitat Builder,Hull Plates,,Scan fragment
