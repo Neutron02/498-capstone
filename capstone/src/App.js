@@ -1,135 +1,136 @@
 import React, { useState, useEffect } from 'react';
+import * as XLSX from 'xlsx';
 import './App.css';
 
 function App() {
-  const [csvData, setCsvData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  // Declaring state variables
+  const [input, setInput] = useState('');
+  const [recipes, setRecipes] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
-  const [selectedResult, setSelectedResult] = useState(null);
+  const [filteredItems, setFilteredItems] = useState([]);
 
   useEffect(() => {
-    console.log("Fetching CSV file...");
-    fetch(`${process.env.PUBLIC_URL}/Subnautica%20Item%20Recipes.csv`)
-      .then((response) => response.text())
-      .then((data) => {
-        console.log("CSV data fetched:", data);
+    fetch('/Subnautica Item Recipes.xlsx')
+      .then(response => response.arrayBuffer()) // Fetches binary data of the Excel file
+      .then(data => {
+        // Parses the binary into a workbook, then gets the sheet of information and converts that sheet data to a JSON array
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-        // parse csv
-        const lines = data.trim().split('\n');
-        console.log("CSV lines:", lines);
-        if (lines.length === 0) {
-          console.log("No lines found in CSV.");
-          return;
-        }
+        const formattedData = jsonData.slice(1).map(row => ({
+          item: row[0], // Item name
+          recipe: row[1] ? row[1].split(',').map(r => r.trim().toLowerCase()) : [], // Item recipe
+          craftedUsing: row[2], // Location item is crafted at
+          category: row[3], // Type of item
+          subcategory: row[4], // Subcategory of item
+          obtainableFrom: row[5], // How to optain crafting recipe for item
+        }));
 
-        // parse headers
-        const headers = lines[0].split(',').map((header) => header.trim());
-        console.log("Parsed headers:", headers);
-
-        // parse rows
-        const rows = lines.slice(1).map((line, index) => {
-          const values = line.split(',').map((val) => val.trim());
-          const rowObj = {};
-          headers.forEach((header, i) => {
-            rowObj[header] = values[i] || '';
-          });
-          console.log(`Row ${index}:`, rowObj);
-          return rowObj;
-        });
-        console.log("All parsed rows:", rows);
-        setCsvData(rows);
+        setRecipes(formattedData);
       })
-      .catch((error) => console.error('Error fetching CSV:', error));
+      .catch(error => console.error('Error loading Excel file:', error));
   }, []);
 
-  // input change and filter
-  const handleInputChange = (e) => {
+  // Handle input change in search bar
+  const handleChange = (e) => {
     const value = e.target.value;
-    console.log("Input change, value:", value);
-    setSearchTerm(value);
-    setSelectedResult(null);
-  
-    // filter suggestions
+    setInput(value);
+
     if (value.length > 0) {
-      const filtered = csvData.filter((row) =>
-        row['Item'] && row['Item'].toLowerCase().includes(value.toLowerCase())
-      );
-      console.log("Filtered suggestions:", filtered);
-      setSuggestions(filtered.slice(0, 10));  // limit suggestions to 10
+      const uniqueMaterials = new Set();
+
+      // Grabs all items with matching resource in crafting recipe
+      recipes.forEach(item => {
+        item.recipe.forEach(material => {
+          if (material.toLowerCase().includes(value.toLowerCase())) {
+            uniqueMaterials.add(material.toLowerCase());
+          }
+        });
+      });
+
+      // As user types into search bar, gives real time possible materials to look up
+      setSuggestions(Array.from(uniqueMaterials));
     } else {
-      console.log("Clearing suggestions.");
       setSuggestions([]);
+      setFilteredItems([]);
     }
   };
 
-  // select suggestion
-  const handleSelectSuggestion = (suggestion) => {
-    console.log("Selected suggestion:", suggestion);
-    setSearchTerm(suggestion['Item']);
-    setSelectedResult(suggestion);
+  // When dropdown material is clicked, it is updated as the material being searched
+  const handleSuggestionClick = (selectedMaterial) => {
+    setInput(selectedMaterial);
     setSuggestions([]);
-  };
 
-  // submit search
-  const handleSubmit = () => {
-    console.log("Submit clicked. Searching for:", searchTerm);
-    const matching = csvData.find(
-      (row) => row['Item'] && row['Item'].toLowerCase() === searchTerm.toLowerCase()
+    const matchingItems = recipes.filter(item =>
+      item.recipe.some(material => material.toLowerCase() === selectedMaterial.toLowerCase())
     );
-    console.log("Matching row:", matching);
-    setSelectedResult(matching || null);
-    setSuggestions([]);
+
+    setFilteredItems(matchingItems);
   };
 
   return (
     <div className="App">
-      <h1>Item Lookup</h1>
-      <div className="input-container">
-        <input
-          type="text"
-          placeholder="Type an item..."
-          value={searchTerm}
-          onChange={handleInputChange}
-          className="search-input"
-        />
-        <button onClick={handleSubmit} type="button" className="submit-button">
-          Submit
-        </button>
-      </div>
-      
-      {suggestions.length > 0 && (
-        <ul className="suggestions">
-          {suggestions.map((s, index) => (
-            <li key={index} onClick={() => handleSelectSuggestion(s)}>
-              {s['Item']}
-            </li>
-          ))}
-        </ul>
-      )}
-      
-      {selectedResult && (
-        <div className="result">
-          <h2>{selectedResult['Item']}</h2>
-          <table className="result-table">
-            <thead>
-              <tr>
-                <th>Characteristic</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.keys(selectedResult)
-                .filter((key) => key !== 'Item')
-                .map((key, index) => (
-                  <tr key={index}>
-                    <td><strong>{key}</strong></td>
-                    <td>{selectedResult[key]}</td>
-                  </tr>
+      <div className="background-container">
+        <div className="content-box">
+          <h1 className="title">Crafting Recipe Search</h1>
+
+          {/* Search Bar */}
+          <div className="dropdown-container">
+            <input
+              type="text"
+              placeholder="Search for a material..."
+              value={input}
+              onChange={handleChange}
+              className="search-bar"
+            />
+            {suggestions.length > 0 && (
+              <ul className="dropdown">
+                {suggestions.map((suggestion, index) => (
+                  <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
+                    {suggestion}
+                  </li>
                 ))}
-            </tbody>
-          </table>
+              </ul>
+            )}
+          </div>
+
+          {/* Table Section */}
+          <div className="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Crafting Recipe</th>
+                  <th>Crafted Using</th>
+                  <th>Category</th>
+                  <th>Subcategory</th>
+                  <th>Obtainable From</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredItems.length > 0 ? (
+                  filteredItems.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.item}</td>
+                      <td>{item.recipe.length > 0 ? item.recipe.join(', ') : 'None'}</td>
+                      <td>{item.craftedUsing}</td>
+                      <td>{item.category}</td>
+                      <td>{item.subcategory}</td>
+                      <td>{item.obtainableFrom}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6">No results found</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
