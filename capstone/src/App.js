@@ -8,6 +8,7 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [viewMode, setViewMode] = useState('recipeSearch');
 
   useEffect(() => {
     fetch('/Subnautica Item Recipes.xlsx')
@@ -39,43 +40,74 @@ function App() {
     setInput(value);
 
     if (value.length > 0) {
+
       const uniqueMaterials = new Set();
 
-      // Grabs all items with matching resource in crafting recipe
-      recipes.forEach(item => {
-        item.recipe.forEach(material => {
-          if (material.toLowerCase().includes(value.toLowerCase())) {
-            uniqueMaterials.add(material.toLowerCase());
-          }
+      if (viewMode === 'itemSearch') {  
+        // Grabs all items with matching resource in crafting recipe
+        recipes.forEach(item => {
+          item.recipe.forEach(material => {
+            if (material.toLowerCase().includes(value.toLowerCase())) {
+              uniqueMaterials.add(material.toLowerCase());
+            }
+          });
         });
-      });
-
-      // As user types into search bar, gives real time possible materials to look up
-      setSuggestions(Array.from(uniqueMaterials));
-    } else {
-      setSuggestions([]);
-      setFilteredItems([]);
+      
+        setSuggestions(Array.from(uniqueMaterials));
+      
+      } 
+      else if (viewMode === 'recipeSearch') {
+        // Grabs all recipes that match the item they are searching for
+        const matchingItems = recipes.filter(item =>
+          item.item.toLowerCase().includes(value.toLowerCase())
+        );
+      
+        setSuggestions(matchingItems.map(item => item.item));  // This is for autocomplete
+      
+      } 
+      else {
+        setSuggestions([]);
+        setFilteredItems([]);
+      }
     }
   };
 
-  // When dropdown material is clicked, it is updated as the material being searched
-  const handleSuggestionClick = (selectedMaterial) => {
-    setInput(selectedMaterial);
+  const handleSuggestionClick = (selectedSuggestion) => {
+    setInput(selectedSuggestion);
     setSuggestions([]);
+  
+    if (viewMode === 'itemSearch') {
+      // Find all items that use this material in their recipe
+      const matchingItems = recipes.filter(item =>
+        item.recipe.some(material => material.toLowerCase() === selectedSuggestion.toLowerCase())
+      );
+      setFilteredItems(matchingItems);
+  
+    } else if (viewMode === 'recipeSearch') {
+      // Find the specific item (by item name)
+      const matchingItems = recipes.filter(item =>
+        item.item.toLowerCase() === selectedSuggestion.toLowerCase()
+      );
+      setFilteredItems(matchingItems);
+    }
+  };
 
-    const matchingItems = recipes.filter(item =>
-      item.recipe.some(material => material.toLowerCase() === selectedMaterial.toLowerCase())
-    );
-
-    setFilteredItems(matchingItems);
+  const toggleViewMode = () => {
+    setViewMode((prevMode) => (prevMode === 'itemSearch' ? 'recipeSearch' : 'itemSearch'));
   };
 
   return (
     <div className="App">
       <div className="background-container">
         <div className="content-box">
-          <h1 className="title">Crafting Recipe Search</h1>
-
+          <h1>{viewMode === 'itemSearch' ? 'Item Search' : 'Recipe Search'}</h1>
+          {/* Button to toggle between search modes */}
+          <div className="view-mode-toggle">
+            <button onClick={toggleViewMode}>
+              Switch to {viewMode === 'itemSearch' ? 'Recipe Search' : 'Item Search'}
+            </button>
+          </div>
+          <br></br>
           {/* Search Bar */}
           <div className="dropdown-container">
             <input
