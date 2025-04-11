@@ -1,31 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import * as XLSX from 'xlsx';
 import './App.css';
+import Navbar from './Components/Navbar';
+import SearchPanel from './Components/SearchPanel';
+import CatalogueGrid from './Components/CatalogeGrid'
 
 function App() {
-  // Declaring state variables
   const [input, setInput] = useState('');
   const [recipes, setRecipes] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
+  const [view, setView] = useState('search'); // 'search' or 'catalogue'
+  const [expandedItemIndex, setExpandedItemIndex] = useState(null);
 
   useEffect(() => {
     fetch('/Subnautica Item Recipes.xlsx')
-      .then(response => response.arrayBuffer()) // Fetches binary data of the Excel file
+      .then(response => response.arrayBuffer())
       .then(data => {
-        // Parses the binary into a workbook, then gets the sheet of information and converts that sheet data to a JSON array
         const workbook = XLSX.read(data, { type: 'array' });
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
         const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
         const formattedData = jsonData.slice(1).map(row => ({
-          item: row[0], // Item name
-          recipe: row[1] ? row[1].split(',').map(r => r.trim().toLowerCase()) : [], // Item recipe
-          craftedUsing: row[2], // Location item is crafted at
-          category: row[3], // Type of item
-          subcategory: row[4], // Subcategory of item
-          obtainableFrom: row[5], // How to optain crafting recipe for item
+          item: row[0],
+          recipe: row[1] ? row[1].split(',').map(r => r.trim().toLowerCase()) : [],
+          craftedUsing: row[2],
+          category: row[3],
+          subcategory: row[4],
+          obtainableFrom: row[5],
         }));
 
         setRecipes(formattedData);
@@ -33,102 +36,60 @@ function App() {
       .catch(error => console.error('Error loading Excel file:', error));
   }, []);
 
-  // Handle input change in search bar
   const handleChange = (e) => {
     const value = e.target.value;
     setInput(value);
-
+  
     if (value.length > 0) {
-      const uniqueMaterials = new Set();
-
-      // Grabs all items with matching resource in crafting recipe
-      recipes.forEach(item => {
-        item.recipe.forEach(material => {
-          if (material.toLowerCase().includes(value.toLowerCase())) {
-            uniqueMaterials.add(material.toLowerCase());
-          }
-        });
-      });
-
-      // As user types into search bar, gives real time possible materials to look up
-      setSuggestions(Array.from(uniqueMaterials));
+      const matchingItems = recipes.filter(item =>
+        item.item.toLowerCase().includes(value.toLowerCase())
+      );
+      // Use the matched item names as suggestions
+      setSuggestions(matchingItems.map(item => item.item));
     } else {
       setSuggestions([]);
       setFilteredItems([]);
     }
   };
-
-  // When dropdown material is clicked, it is updated as the material being searched
-  const handleSuggestionClick = (selectedMaterial) => {
-    setInput(selectedMaterial);
+  
+  // Update handleSuggestionClick to filter by exact item name:
+  const handleSuggestionClick = (selectedItem) => {
+    setInput(selectedItem);
     setSuggestions([]);
-
+  
     const matchingItems = recipes.filter(item =>
-      item.recipe.some(material => material.toLowerCase() === selectedMaterial.toLowerCase())
+      item.item.toLowerCase() === selectedItem.toLowerCase()
     );
-
     setFilteredItems(matchingItems);
+  };
+  const handleCatalogueItemClick = (index) => {
+    setExpandedItemIndex(prevIndex => (prevIndex === index ? null : index));
   };
 
   return (
     <div className="App">
+      <Navbar setView={setView} />
       <div className="background-container">
         <div className="content-box">
-          <h1 className="title">Crafting Recipe Search</h1>
-
-          {/* Search Bar */}
-          <div className="dropdown-container">
-            <input
-              type="text"
-              placeholder="Search for a material..."
-              value={input}
-              onChange={handleChange}
-              className="search-bar"
+          <h1 className="title">
+            Crafting Recipe {view === 'catalogue' ? 'Catalogue' : 'Search'}
+          </h1>
+          {view === 'catalogue' ? (
+            <CatalogueGrid
+              recipes={recipes}
+              expandedItemIndex={expandedItemIndex}
+              handleCatalogueItemClick={handleCatalogueItemClick}
             />
-            {suggestions.length > 0 && (
-              <ul className="dropdown">
-                {suggestions.map((suggestion, index) => (
-                  <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
-                    {suggestion}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          {/* Table Section */}
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Item</th>
-                  <th>Crafting Recipe</th>
-                  <th>Crafted Using</th>
-                  <th>Category</th>
-                  <th>Subcategory</th>
-                  <th>Obtainable From</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredItems.length > 0 ? (
-                  filteredItems.map((item, index) => (
-                    <tr key={index}>
-                      <td>{item.item}</td>
-                      <td>{item.recipe.length > 0 ? item.recipe.join(', ') : 'None'}</td>
-                      <td>{item.craftedUsing}</td>
-                      <td>{item.category}</td>
-                      <td>{item.subcategory}</td>
-                      <td>{item.obtainableFrom}</td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan="6">No results found</td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
+          ) : (
+            <SearchPanel
+              input={input}
+              setInput={setInput}
+              suggestions={suggestions}
+              handleSuggestionClick={handleSuggestionClick}
+              filteredItems={filteredItems}
+              handleChange={handleChange}
+            />
+          )}
         </div>
       </div>
     </div>
