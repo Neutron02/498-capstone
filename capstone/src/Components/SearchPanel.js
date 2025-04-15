@@ -1,8 +1,15 @@
 import React from 'react';
 
-function SearchPanel({ input, setInput, suggestions, handleSuggestionClick, filteredItems, handleChange }) {
+
+function SearchPanel({ input, setInput, suggestions, handleSuggestionClick, filteredItems, handleChange, toggleSearchMode, searchMode }) {
   return (
     <div>
+      <div className="view-mode-toggle">
+        <button onClick={toggleSearchMode}>
+          Switch to {searchMode === 'itemSearch' ? 'Crafting Recipe Search' : 'Item Search'}
+        </button>
+      </div>
+      <br></br>
       <div className="dropdown-container">
         <input
           type="text"
